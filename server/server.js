@@ -12,13 +12,13 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-server.applyMiddleware({ app });
+
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 server.applyMiddleware({ app });
-server.applyMiddleware({ app });
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
