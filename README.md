@@ -10,10 +10,6 @@ It is a book searching application where the users can sign in and save and dele
 
 * [Usage](#usage)
 
-* [Contributing](#contributing)
-
-* [Tests](#tests)
-
 * [Questions](#questions)
 
 ## Installation
@@ -28,19 +24,6 @@ npm i
 
 npm run develop for local use 
 
-
-  
-## Contributing
-
-
-
-## Tests
-
-To run tests, run the following command:
-
-```
-
-```
 
 ## Questions
 
