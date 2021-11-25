@@ -44,10 +44,11 @@ const resolvers = {
         if (context.user) {
           const updatedUser = await User.findByIdAndUpdate(
             { _id: context.user._id },
-            { $addToSet: { savedBooks: args.input } },
-            { new: true }
+            { $addToSet: { savedBookInputs: args.input } },
+            // {$push: {savedBookInputs: args}},
+            { new: true,  runValidators: true }
           );
-  
+          console.log(updatedUser);
           return updatedUser;
         }
   
@@ -58,7 +59,7 @@ const resolvers = {
         if (context.user) {
           const updatedUser = await User.findOneAndUpdate(
             { _id: context.user._id },
-            { $pull: { savedBooks: { bookId: args.bookId } } },
+            { $pull: { savedBookInputs: { bookId: args.bookId } } },
             { new: true }
           );
   
