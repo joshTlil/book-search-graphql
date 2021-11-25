@@ -33,7 +33,6 @@ app.get('*', (req, res) => {
 });
 
 // app.use(routes);
-
 db.once('open', () => {
   app.listen(PORT, () => {
      console.log(`🌍 Now listening on localhost:${PORT}`);
